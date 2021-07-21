@@ -1,0 +1,14 @@
+body{
+    padding: 50px;
+}
+
+nav{
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    padding: 15px 10px;
+    border: 1px solid greenyellow;
+    margin: 10px;
+}

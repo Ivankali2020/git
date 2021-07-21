@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   
+  <script>
+
+    const login = () => {
+        const loginData = new Promise((resolve,reject) => {
+            // setTimeout(() => {
+            //     resolve('Login Succeffuly Complete');
+            // }, 3000)
+            setTimeout(() => {
+                reject('Login Rejected')
+            },2000)
+        })
+        return loginData;
+    }
+
+    const fetchDate = () => {
+        return new Promise((resolve,reject) => {
+            setTimeout(() => {
+                resolve('Spring  Revolution Fetch Data')
+            } , 4000)
+        })
+    }
+    const showUiDisplay = (data) => {
+        console.log('Show Ui Display ',data)
+    }
+    login().then((data)=>{
+        console.log('fuck the coup',data);
+
+        fetchDate().then((data) =>{
+            console.log(data)
+            showUiDisplay(data)
+
+        });
+    });
+
+    login().catch((error) => {
+        console.log(error);
+        fetchDate().then((data) =>{
+            console.log(data)
+            showUiDisplay(data)
+
+        });
+    })
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
